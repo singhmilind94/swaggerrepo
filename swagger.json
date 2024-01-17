@@ -1,0 +1,3886 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Moon God",
+    "description": "Thesssssssssssssssssssssssssssssssssssssss HRToPay APIs Creates Core HR data for HR to Moorepay Payroll Integration.",
+    "version": "v1",
+    "x-logo": {
+      "altText": "Petstore logo",
+      "backgroundColor": "#FFFFFF",
+      "url": "https://redocly.github.io/redoc/petstore-logo.png"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://as-mp-dev01-api-hrtopay-pri.azurewebsites.net"
+    }
+  ],
+  "paths": {
+    "/HRToPay/PostHRToPayDetailsToHoldingTable": {
+      "post": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PostHRToPayDetailsToHoldingTablesssssssssssssssssssssssssss",
+        "requestBody": {
+          "description": "Basic HR to Pay employee details to holdoing table field to insert",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inserts submitted new hr details from Natural HR system. if requestor, is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PutHRToPayDetailsToHoldingAndMainTable": {
+      "put": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PutHRToPayDetailsToHoldingAndMainTable",
+        "requestBody": {
+          "description": "Basic HR to Pay employee details to holdoing table field to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updates submitted new hr details from Natural HR system. if requestor, is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/GetHRToPayHoldingTableDetails": {
+      "get": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "GetHRToPayHoldingTableDetails",
+        "parameters": [
+          {
+            "name": "hr_employee_id",
+            "in": "query",
+            "description": "Key String[8]",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request HR To Pay employee details from holding table for given that the requestor is authorized to view",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HRToPayEmployeeHoldingDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/DeleteHRToPayDetailsToHoldingTable": {
+      "delete": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "DeleteHRToPayDetailsToHoldingTable",
+        "parameters": [
+          {
+            "name": "hr_employee_id",
+            "in": "query",
+            "description": "Basic HR to Pay employee details to holdoing table field to delete",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Deletes submitted new hr details from Natural HR system. if requestor, is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PostEmployeeTimesheetsFromNHRDetails": {
+      "post": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PostEmployeeTimesheetsFromNHRDetails",
+        "requestBody": {
+          "description": "Timesheet to be inserted from NHR details",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inserts submitted Timesheet information from NHR details if the requestor is authorized to do so.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PutEmployeeTimesheetsFromNHRDetails": {
+      "put": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PutEmployeeTimesheetsFromNHRDetails",
+        "requestBody": {
+          "description": "Timesheet to be updated from NHR details",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inserts updated Timesheet information from NHR details if the requestor is authorized to do so.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeeTimesheetsForNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/DeleteEmployeeTimesheetsFromNHRDetails": {
+      "delete": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "DeleteEmployeeTimesheetsFromNHRDetails",
+        "parameters": [
+          {
+            "name": "hr_employee_id",
+            "in": "query",
+            "description": "Key String[8]",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "transaction_id",
+            "in": "query",
+            "description": "Key String[16]",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete timesheets from NHR details if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/HRToPay/PostEmployeeLeaveFromNHRDetails": {
+      "post": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PostEmployeeLeaveFromNHRDetails",
+        "requestBody": {
+          "description": "Insert Employee leave records",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inserts submitted employee leave information from NHR if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PutEmployeeLeaveFromNHRDetails": {
+      "put": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PutEmployeeLeaveFromNHRDetails",
+        "requestBody": {
+          "description": "Update Employee leave records from NHR",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesLeaveForNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updates submitted employee leave from NHR information if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/DeleteEmployeeLeaveFromNHRDetails": {
+      "delete": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "DeleteEmployeeLeaveFromNHRDetails",
+        "parameters": [
+          {
+            "name": "hr_employee_id",
+            "in": "query",
+            "description": "NHR Employee Id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "transaction_id",
+            "in": "query",
+            "description": "Key String[16]",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete employee leave entry from NHR if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PutEmployeeLeaversFromNHRDetails": {
+      "put": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PutEmployeeLeaversFromNHRDetails",
+        "requestBody": {
+          "description": "Employee Leavers Details fields to be updated, If you want to clear out the values then pass the value as \"NULL\",\"Null\" or \"null\"",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTerminationDetailsNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTerminationDetailsNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTerminationDetailsNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeTerminationDetailsNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updates submitted employee leaver details if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PostEmployeeExpensesFromNHRDetails": {
+      "post": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PostEmployeeExpensesFromNHRDetails",
+        "requestBody": {
+          "description": "Employee expenses type fields to insert from NHR details",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inserts submitted single expense NHR details if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PutEmployeeExpensesFromNHRDetails": {
+      "put": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PutEmployeeExpensesFromNHRDetails",
+        "requestBody": {
+          "description": "Employee expenses from NHR details to be updated",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeeExpensesNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updates submitted expenses from NHR details  information if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/DeleteEmployeeExpensesFromNHRDetails": {
+      "delete": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "DeleteEmployeeExpensesFromNHRDetails",
+        "parameters": [
+          {
+            "name": "hr_employee_id",
+            "in": "query",
+            "description": "Key String[8]",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "transaction_id",
+            "in": "query",
+            "description": "Key String[16]",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete expenses from NHR details if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/HRToPay/PostPayslipBreakdownDetailsToNHR": {
+      "post": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "This endpoint will provide details of an employee payslip to the authorized requestor",
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pay_period",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PostPermanentPayFromNHRDetails": {
+      "post": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PostPermanentPayFromNHRDetails",
+        "requestBody": {
+          "description": "Employee permanent pay details from NHR details fields to be inserted",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inserts submitted permanent pay details from NHR details if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PutPermanentPayFromNHRDetails": {
+      "put": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PutPermanentPayFromNHRDetails",
+        "requestBody": {
+          "description": "Employee permanent pay details from NHR fields to be updated",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermanentPayDetailsNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updates submitted permanent pay details from NHR if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/DeletePayCodeDetailsFromNHRDetails": {
+      "delete": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "DeletePayCodeDetailsFromNHRDetails",
+        "parameters": [
+          {
+            "name": "hr_employee_id",
+            "in": "query",
+            "description": "Key String[8]",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pay_code",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Delete Pay and deduction codes from NHR details if requestor is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/HRToPay/GetBenefitDetailsPayForNHR": {
+      "get": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "GetBenefitDetailsPayByNHRIdForNHR",
+        "responses": {
+          "200": {
+            "description": "This endpoint will provide details of an employee benefit details to the authorized requestor",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BenefitDetailsNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BenefitDetailsNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BenefitDetailsNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PostStatutoryLeaveDetailsToHoldingTable": {
+      "post": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PostStatutoryLeaveDetailsToHoldingTable",
+        "requestBody": {
+          "description": "Employee Statutory Leave Details To Holding Table field to insert",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inserts submitted new statutory leave details from Natural HR system. if requestor, is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/PutStatutoryLeaveDetailsToHoldingTable": {
+      "put": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "PutStatutoryLeaveDetailsToHoldingTable",
+        "requestBody": {
+          "description": "Employee Statutory Leave Details To Holding Table field to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StatutoryLeaveDetailsNHR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updates submitted new  statutory leave details from Natural HR system. if requestor, is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/HRToPay/DeleteStatutoryLeaveDetailsFromHoldingTable": {
+      "delete": {
+        "tags": [
+          "HRToPay"
+        ],
+        "summary": "DeleteStatutoryLeaveDetailsFromHoldingTable",
+        "parameters": [
+          {
+            "name": "hr_employee_id",
+            "in": "query",
+            "description": "Basic Statutory Leave Details employee details to holdoing table field to delete",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Deletes submitted new statutory leave details from Natural HR system. if requestor, is authorized to do so",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseMessagesNHR"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BenefitDetailsNHR": {
+        "type": "object",
+        "properties": {
+          "employeeNumber": {
+            "type": "string",
+            "description": "CCEMPDET.DEMPNO",
+            "nullable": true
+          },
+          "companyCode": {
+            "type": "string",
+            "description": "CCEMPDET.DCONO",
+            "nullable": true
+          },
+          "payCode": {
+            "type": "string",
+            "description": "CCEMPDET.DPDNCO",
+            "nullable": true
+          },
+          "payCodeDescription": {
+            "type": "string",
+            "description": "NotMapped",
+            "nullable": true
+          },
+          "costOrPercentage": {
+            "type": "string",
+            "description": "CCEMPDET.DAMTTP",
+            "nullable": true
+          },
+          "erValue": {
+            "type": "string",
+            "description": "CCEMPDET.DNIECM",
+            "nullable": true
+          },
+          "eeValue": {
+            "type": "string",
+            "description": "CCEMPDET.DHRQTD",
+            "nullable": true
+          },
+          "additionalVoluntaryValue": {
+            "type": "string",
+            "description": "NotMapped",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "description": "CCEMPEFF.EFSTDT",
+            "nullable": true
+          },
+          "endDate": {
+            "type": "string",
+            "description": "CCEMPEFF.EFSTDT",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Maps to tables CCEMPDET,CCEMPEFF"
+      },
+      "EmployeeExpensesNHR": {
+        "required": [
+          "cost_centre",
+          "date",
+          "department",
+          "first_name",
+          "pay_code",
+          "status",
+          "sur_name",
+          "transaction_id",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "hr_employee_id": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "description": "PEMPMEXT.PERSRVD3",
+            "nullable": true
+          },
+          "transaction_id": {
+            "maxLength": 16,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TTRID[16]"
+          },
+          "first_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "type": "string",
+            "description": "CCEMPMAS.ENAME1[24]"
+          },
+          "sur_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "type": "string",
+            "description": "CCEMPMAS.ENAME[24]"
+          },
+          "date": {
+            "minLength": 1,
+            "type": "string",
+            "description": "TSDATA.TFRDT"
+          },
+          "pay_code": {
+            "type": "string",
+            "description": "TSDATA.TTYPH[3]"
+          },
+          "department": {
+            "maxLength": 8,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TDEP[8]"
+          },
+          "cost_centre": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TLABC1[10]"
+          },
+          "value": {
+            "type": "string",
+            "description": "TSDATA.TVALUE"
+          },
+          "status": {
+            "type": "integer",
+            "description": "TSDATA.TSTS",
+            "format": "int32"
+          },
+          "employee_comments": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string",
+            "description": "TCOMM.COMMENT[255]",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Maps to tables CCEMPMAS, TSDATA, TCOMM, PEMPMEXT"
+      },
+      "EmployeeTerminationDetailsNHR": {
+        "required": [
+          "employee_status",
+          "leave_date",
+          "leave_reason_code"
+        ],
+        "type": "object",
+        "properties": {
+          "hr_employee_id": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "description": "Maps to PEMPMEXT.PERSRVD3",
+            "nullable": true
+          },
+          "leave_date": {
+            "type": "string",
+            "description": "CCEMPMAS.ELEAVE Format yyyy-MM-dd"
+          },
+          "leave_reason_code": {
+            "type": "integer",
+            "description": "CCEMPMAS.ELVRSN",
+            "format": "int32"
+          },
+          "employee_status": {
+            "type": "string",
+            "description": "CCEMPMAS.ESTATS"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Maps to table CCEMPMAS"
+      },
+      "EmployeeTimesheetsForNHR": {
+        "required": [
+          "cost_centre",
+          "date",
+          "department",
+          "first_name",
+          "hours",
+          "pay_code",
+          "rate",
+          "status",
+          "sur_name",
+          "transaction_id",
+          "units",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "hr_employee_id": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "description": "PEMPMEXT.PERSRVD3",
+            "nullable": true
+          },
+          "transaction_id": {
+            "maxLength": 16,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TTRID[16]"
+          },
+          "first_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "type": "string",
+            "description": "CCEMPMAS.ENAME1[24]"
+          },
+          "sur_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "type": "string",
+            "description": "CCEMPMAS.ENAME[24]"
+          },
+          "date": {
+            "minLength": 1,
+            "type": "string",
+            "description": "TSDATA.TFRDT"
+          },
+          "pay_code": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TTYPH[3]"
+          },
+          "department": {
+            "maxLength": 8,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TDEP[8]"
+          },
+          "cost_centre": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TLABC1[10]"
+          },
+          "hours": {
+            "type": "number",
+            "description": "TSDATA.THRS",
+            "format": "double"
+          },
+          "rate": {
+            "type": "string",
+            "description": "TSDATA.TBPAY"
+          },
+          "units": {
+            "type": "string",
+            "description": "TSDATA.TUNIT"
+          },
+          "value": {
+            "type": "number",
+            "description": "TSDATA.TVALUE",
+            "format": "double"
+          },
+          "status": {
+            "type": "integer",
+            "description": "TSDATA.TSTS",
+            "format": "int32"
+          },
+          "employee_comments": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string",
+            "description": "TCOMM.COMMENT[255]",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Maps to table TSDATA, TSDATAE and PEMPMEXT"
+      },
+      "EmployeesLeaveForNHR": {
+        "required": [
+          "doctors_certificate",
+          "employee_comments",
+          "first_name",
+          "leave_type",
+          "start_date",
+          "status",
+          "sur_name",
+          "transaction_id"
+        ],
+        "type": "object",
+        "properties": {
+          "hr_employee_id": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "description": "PEMPMEXT.PERSRVD3",
+            "nullable": true
+          },
+          "transaction_id": {
+            "maxLength": 16,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TTRID[16]"
+          },
+          "start_date": {
+            "minLength": 1,
+            "type": "string",
+            "description": "TSDATA.TFRDT"
+          },
+          "end_date": {
+            "type": "string",
+            "description": "TSDATA.TTODT",
+            "nullable": true
+          },
+          "first_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "type": "string",
+            "description": "CCEMPMAS.ENAME1[24]"
+          },
+          "sur_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "type": "string",
+            "description": "CCEMPMAS.ENAME[24]"
+          },
+          "leave_type": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TTYPH[3]"
+          },
+          "other_leave_reason": {
+            "maxLength": 2,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TLVREA[2]",
+            "nullable": true
+          },
+          "absence_dates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LeaveHoursNHR"
+            },
+            "description": "Hours",
+            "nullable": true
+          },
+          "status": {
+            "type": "number",
+            "description": "TSDATA.TSTS",
+            "format": "double"
+          },
+          "duration": {
+            "maxLength": 6,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TLVREA[2]",
+            "nullable": true
+          },
+          "doctors_certificate": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "description": "TSDATA.TAUTH[1]"
+          },
+          "employee_comments": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string",
+            "description": "TCOMM.COMMENT[255]"
+          },
+          "half_day_am": {
+            "type": "boolean",
+            "description": "Half Day AM / Half Last Day"
+          },
+          "half_day_pm": {
+            "type": "boolean",
+            "description": "Half Day PM / Half First Day"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Maps to table CCEMPMAS"
+      },
+      "HRToPayEmployeeHoldingDetails": {
+        "required": [
+          "address",
+          "address2",
+          "annualised_salary",
+          "birth_gender",
+          "dob",
+          "first_name",
+          "hr_employee_id",
+          "middle_name",
+          "start_date",
+          "sur_name",
+          "work_email"
+        ],
+        "type": "object",
+        "properties": {
+          "hr_employee_id": {
+            "maxLength": 8,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91NHRID"
+          },
+          "title": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91TITL",
+            "nullable": true
+          },
+          "sur_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z()'-/ ]*$",
+            "type": "string",
+            "description": "W091.W91NAME",
+            "default": ""
+          },
+          "first_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z-']*$",
+            "type": "string",
+            "description": "W091.W91NAME1",
+            "default": ""
+          },
+          "middle_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z-']*$",
+            "type": "string",
+            "description": "W091.W91NAME2",
+            "default": ""
+          },
+          "address": {
+            "maxLength": 40,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9 ,!%&?:;()<>*+=./'///-]+$",
+            "type": "string",
+            "description": "W091.W91ADD1",
+            "default": ""
+          },
+          "address2": {
+            "maxLength": 40,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9 ,!%&?:;()<>*+=./'///-]+$",
+            "type": "string",
+            "description": "W091.W91ADD2",
+            "default": ""
+          },
+          "town": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91TOWN",
+            "nullable": true
+          },
+          "county": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91COUNTY",
+            "nullable": true
+          },
+          "postcode": {
+            "maxLength": 14,
+            "minLength": 0,
+            "pattern": "^[A-Z]{1,2}[0-9][0-9A-Z]? [0-9][A-Z]{2}$",
+            "type": "string",
+            "description": "W091.W91PSTCODE",
+            "nullable": true
+          },
+          "country": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91CNTRY",
+            "nullable": true
+          },
+          "dob": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91DOBTH"
+          },
+          "national_insurance": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91NINUM",
+            "default": "",
+            "nullable": true
+          },
+          "account_number": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91ACCNUM",
+            "nullable": true
+          },
+          "sort_code": {
+            "maxLength": 6,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91SRTCODE",
+            "nullable": true
+          },
+          "account_name": {
+            "maxLength": 30,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91ACCNAME",
+            "nullable": true
+          },
+          "building_society_reference": {
+            "maxLength": 18,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91BLDGSOC",
+            "nullable": true
+          },
+          "job_grade": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91POSID",
+            "nullable": true
+          },
+          "job_status": {
+            "maxLength": 40,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91JBSTAT",
+            "nullable": true
+          },
+          "primary_cost_code": {
+            "maxLength": 24,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91COSCR",
+            "default": "",
+            "nullable": true
+          },
+          "wdays": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91WDAYS",
+            "nullable": true
+          },
+          "start_date": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91START"
+          },
+          "hours_per_week": {
+            "maximum": 99.99,
+            "minimum": 0,
+            "type": "number",
+            "description": "W091.W91HRSPWK",
+            "format": "double"
+          },
+          "work_telephone": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91WRKTEL",
+            "nullable": true
+          },
+          "work_mobile": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91WRKMB",
+            "nullable": true
+          },
+          "home_telephone": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91HMTEL",
+            "nullable": true
+          },
+          "home_mobile": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91HMMB",
+            "nullable": true
+          },
+          "home_email": {
+            "maxLength": 80,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91HMEML",
+            "nullable": true
+          },
+          "work_email": {
+            "maxLength": 80,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91UREML"
+          },
+          "marital_status": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91MRTSTAT",
+            "nullable": true
+          },
+          "birth_gender": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91SEX"
+          },
+          "annualised_salary": {
+            "type": "number",
+            "description": "W091.W91ANSAL",
+            "format": "double"
+          },
+          "status": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91STATS",
+            "nullable": true
+          },
+          "remarks": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "description": "W091.W91REMKS",
+            "nullable": true
+          },
+          "salary_effective_date": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "not mapped",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "table W091"
+      },
+      "LeaveHoursNHR": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "TDDATE",
+            "nullable": true
+          },
+          "absence_meter": {
+            "type": "string",
+            "description": "Type",
+            "nullable": true
+          },
+          "absence_duration": {
+            "type": "string",
+            "description": "Duration",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "LeaveHours"
+      },
+      "PermanentPayDetailsNHR": {
+        "required": [
+          "pay_code",
+          "start_date"
+        ],
+        "type": "object",
+        "properties": {
+          "hr_employee_id": {
+            "maxLength": 12,
+            "minLength": 0,
+            "type": "string",
+            "description": "Maps to PEMPMEXT.PERSRVD3",
+            "nullable": true
+          },
+          "pay_code": {
+            "minLength": 1,
+            "type": "string",
+            "description": "CCEMPDET.DPYDDN"
+          },
+          "start_date": {
+            "minLength": 1,
+            "type": "string",
+            "description": "CCPADEF.EFSTDT"
+          },
+          "end_date": {
+            "type": "string",
+            "description": "CCPADEF.EFENDT",
+            "nullable": true
+          },
+          "period_amount": {
+            "type": "string",
+            "description": "CCPADEF.EFPDAM",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Maps to table CCEMPDET, CCEMPEFF, CCDETEXT"
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
+      "ResponseMessagesNHR": {
+        "required": [
+          "responseMessage"
+        ],
+        "type": "object",
+        "properties": {
+          "responseMessage": {
+            "type": "string",
+            "description": "Success Message"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Generic Response Message Class"
+      },
+      "StatutoryLeaveDetailsNHR": {
+        "required": [
+          "cert_date",
+          "expected_confinement",
+          "first_name",
+          "hr_employee_id",
+          "paternity_type",
+          "paternity_weeks",
+          "start_date",
+          "statutory_type",
+          "sur_name",
+          "transaction_id"
+        ],
+        "type": "object",
+        "properties": {
+          "hr_employee_id": {
+            "maxLength": 8,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94NHRID"
+          },
+          "transaction_id": {
+            "maxLength": 16,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94TRNID"
+          },
+          "statutory_type": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94STATTYP",
+            "default": ""
+          },
+          "sur_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z()'-/ ]*$",
+            "type": "string",
+            "description": "W094.W94SNAME",
+            "default": ""
+          },
+          "first_name": {
+            "maxLength": 24,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z-']*$",
+            "type": "string",
+            "description": "W094.W94FNAME",
+            "default": ""
+          },
+          "start_date": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94STDT"
+          },
+          "expected_confinement": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94EXPCON"
+          },
+          "cert_date": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94MEDCERT"
+          },
+          "expected_placement": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94EXPPLA",
+            "nullable": true
+          },
+          "actual_confinement": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94ACTCON",
+            "nullable": true
+          },
+          "actual_placement": {
+            "maxLength": 13,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94ACTPLA",
+            "nullable": true
+          },
+          "paternity_type": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94PATTYP",
+            "default": ""
+          },
+          "paternity_weeks": {
+            "maxLength": 1,
+            "minLength": 0,
+            "type": "string",
+            "description": "W094.W94PATWKS",
+            "default": ""
+          }
+        },
+        "additionalProperties": false,
+        "description": "table W094"
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n\r\n                      Enter 'Bearer' [space] and then your token in the text input below.\r\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
